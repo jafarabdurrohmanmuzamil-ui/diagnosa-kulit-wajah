@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistem Pakar Diagnosa Penyakit Kulit Wajah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Sistem Pakar Diagnosa Penyakit Kulit Wajah</h1>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#diagnosa">Diagnosa</a>
+        <a href="#diagram-tree">Diagram Tree</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="diagnosa">
+      <div class="hero__text">
+        <h2>Diagnosa cepat, langkah demi langkah</h2>
+        <div class="hero__actions">
+          <button id="btnStart" class="btn btn--primary">Mulai Diagnosa</button>
+          <button id="btnReset" class="btn btn--ghost" disabled>Ulangi</button>
+        </div>
+      </div>
+
+      <!-- <div class="card card--tree" aria-label="Ringkasan pohon keputusan (rule)">
+        <div class="card__title">Diagram Tree</div>
+        <div class="treeimg">
+          <img src="diagram.jpeg" alt="Diagram Tree Diagnosa Penyakit Kulit Wajah" />
+        </div>
+      </div> -->
+    </section>
+
+    <section class="card" id="wizard" hidden>
+      <div class="card__title">Pertanyaan Diagnosa</div>
+
+      <div class="progress" aria-label="progress">
+        <div class="progress__bar" id="progressBar" style="width:0%"></div>
+      </div>
+
+      <div id="stepArea" class="step">
+      </div>
+
+      <div class="step__nav">
+        <button id="btnBack" class="btn btn--ghost" disabled>Kembali</button>
+        <button id="btnNext" class="btn btn--primary" disabled>Lanjut</button>
+      </div>
+    </section>
+
+    <section class="card" id="result" hidden>
+      <div class="card__title">Hasil Diagnosa</div>
+      <div id="resultBody" class="result">
+      </div>
+    </section>
+
+  
+    <section class="section" id="diagram-tree">
+      <div class="section__head">
+        <h2>Diagram Tree</h2>
+
+      <div class="card">
+        <div class="treeimg treeimg--full">
+          <img src="diagram.jpeg" alt="Diagram Tree Diagnosa Penyakit Kulit Wajah" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
